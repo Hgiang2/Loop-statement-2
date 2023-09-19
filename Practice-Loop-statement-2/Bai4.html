@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luyện tập vòng lặp 02 (bài 04)</title>
+</head>
+<body>
+<script>
+  function lineDraw(symbol) {
+      let result="*";
+      for (let i=0; i < 20; i++) {
+          result += symbol;
+      }
+      result += "*" + "<br>";
+      return result;
+  }
+
+  document.write(lineDraw("*"));
+  for (let i=0; i < 5; i++) {
+      document.write(lineDraw("&nbsp;&nbsp;"));
+  }
+  document.write(lineDraw("*"));
+</script>
+</body>
+</html>

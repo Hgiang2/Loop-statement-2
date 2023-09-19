@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luyện tập vòng lặp 01 (bài 02)</title>
+</head>
+<body>
+<script>
+    let degree = parseInt(prompt('Nhập hiện độ hiện tại: '));
+    while (degree < 20 || degree > 100) {
+        if (degree > 100) {
+            alert('Hãy giảm nhiệt độ');
+        } else if (degree < 20) {
+            alert('Hãy tăng nhiệt độ');
+        }
+        degree = parseInt(prompt('Nhập hiện độ hiện tại: '));
+    }
+    alert('Nhiệt độ bình thường');
+</script>
+</body>
+</html>

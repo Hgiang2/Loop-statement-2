@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luyện tập vòng lặp 02 (bài 01)</title>
+</head>
+<body>
+<script>
+  let count=parseInt(prompt('Nhập độ dài dãy Fibonacci cần in: '));
+  let n1 = 0, n2 = 1;
+  let arr = [n1, n2];
+  for (let i=0; i < count; i++) {
+      let nextTerm=n1+n2;
+      arr.push(nextTerm);
+      n1 = n2;
+      n2 = nextTerm;
+  }
+  document.write(arr.join(", "));
+</script>
+</body>
+</html>

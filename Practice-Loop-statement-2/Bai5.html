@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luyện tập vòng lặp 02 (bài 05)</title>
+  <style>
+      * {
+          box-sizing: border-box;
+          margin: 0;
+          font-family: Merriweather, sans-serif;
+      }
+
+      body {
+          display: flex;
+          flex-direction: column;
+          gap: 32px;
+          margin: 50px;
+      }
+
+      h2 {
+          font-size: 16px;
+          line-height: 1.5;
+          margin: 10px;
+      }
+
+      input {
+          width: 270px;
+      }
+
+      input, button, option {
+          font-size: 16px;
+          padding: 5px;
+      }
+
+      p {
+          font-weight: bold;
+          margin: 10px;
+          color: darkred;
+      }
+  </style>
+</head>
+<body>
+<h2>Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi
+  xuất hàng tháng.</h2>
+<input type="number" id="fund" placeholder="Nhập số vốn (VND)">
+<input type="number" id="month" placeholder="Nhập số tháng cho vay">
+<input type="number" id="rate" placeholder="Nhập lãi suất hàng tháng (%)">
+<button onclick="check12()">Calculate</button>
+<p id="result12"></p>
+<script>
+    function check12() {
+        let fund=document.getElementById('fund').value;
+        let month=document.getElementById('month').value;
+        let rate=document.getElementById('rate').value;
+        let sumRate=(fund*(1+rate/100)^month)-fund;
+        document.getElementById('result12').innerHTML='Tiền lãi là ' + sumRate + 'VND';
+    }
+</script>
+</body>
+</html>

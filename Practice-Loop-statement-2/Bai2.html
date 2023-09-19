@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luyện tập vòng lặp 02 (bài 03)</title>
+</head>
+<body>
+<script>
+  let num=parseInt(prompt('Nhập một số nguyên dương: '));
+  while (num<=0) {
+      alert('Số vừa nhập vào không đúng');
+      num=parseInt(prompt('Nhập một số nguyên dương: '));
+  }
+  let fact=num;
+  for (let i=1; i<num; i++) {
+      fact *= i;
+  }
+  document.write('Giai thừa của ' + num + ' là ' + fact)
+</script>
+</body>
+</html>

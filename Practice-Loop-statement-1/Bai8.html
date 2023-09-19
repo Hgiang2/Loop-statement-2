@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luyện tập vòng lặp 01 (bài 08)</title>
+</head>
+<body>
+<h1>Hãy thử đoán xem!</h1>
+<button id="button" onclick="play()" style="font-size:24px">Chơi</button>
+<script>
+    function play() {
+        let max = parseInt(prompt('Nhập vào khoảng lớn nhất bạn muốn đoán: '));
+        let num = parseInt(prompt('Nhập vào số bất kì: '));
+        let result = Math.floor(Math.random() * max);
+        if (num == result) {
+            alert('Chúc mừng bạn đã đoán đúng!');
+        } else {
+            for (let i = 0; i < 2; i++) {
+                if (num < result) {
+                    alert('Số bạn nhập vào bé hơn số được chọn')
+                } else {
+                    alert('Số bạn nhập vào lớn hơn số được chọn')
+                }
+                num = parseInt(prompt('Vui lòng nhập lại (từ 1 đến 100): '));
+            }
+            alert('Hết số lần đoán');
+        }
+        document.getElementById('button').innerHTML = 'Chơi lại';
+    }
+</script>
+</body>
+</html>
